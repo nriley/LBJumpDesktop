@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>com.p5sys.jump.mac.viewer</string>
+	<key>CFBundleIdentifier</key>
+	<string>net.sabi.LaunchBar.action.JumpDesktopConnections</string>
+	<key>CFBundleName</key>
+	<string>Jump Desktop Connections</string>
+	<key>CFBundleVersion</key>
+	<string>1.0b1</string>
+	<key>LBAssociatedApplication</key>
+	<string>com.p5sys.jump.mac.viewer</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>Nicholas Riley</string>
+		<key>LBEmail</key>
+		<string>launchbar@sabi.net</string>
+		<key>LBRequirements</key>
+		<string>Jump Desktop for Mac (tested with 6.0.3)</string>
+		<key>LBResult</key>
+		<string>The list of Jump Desktop connections.</string>
+		<key>LBSummary</key>
+		<string>This action returns a list of Jump Desktop connections.</string>
+		<key>LBTwitter</key>
+		<string>@nriley</string>
+		<key>LBWebsiteURL</key>
+		<string>https://sabi.net/nriley/software/#launchbar</string>
+	</dict>
+	<key>LBRequiredApplication</key>
+	<string>com.p5sys.jump.mac.viewer</string>
+	<key>LBRequirements</key>
+	<string>Jump Desktop for Mac (tested with 6.0.3)</string>
+	<key>LBResult</key>
+	<string>The list of Jump Desktop connections.</string>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBReturnsResult</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.py</string>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2016 Nicholas Riley</string>
+</dict>
+</plist>

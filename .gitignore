@@ -7,3 +7,6 @@
 
 # OS X code signatures
 _CodeSignature/
+
+# Packaged actions
+*-*.lbaction

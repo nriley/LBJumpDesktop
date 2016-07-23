@@ -29,6 +29,8 @@
 		<key>LBWebsiteURL</key>
 		<string>https://sabi.net/nriley/software/#launchbar</string>
 	</dict>
+	<key>LBMinimumLaunchBarVersion</key>
+	<integer>6135</integer>
 	<key>LBRequiredApplication</key>
 	<string>com.p5sys.jump.mac.viewer</string>
 	<key>LBRequirements</key>

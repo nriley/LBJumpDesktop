@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import glob, json, os, subprocess, urllib
+import glob, json, os, subprocess
 
 jump_bundle_id = 'com.p5sys.jump.mac.viewer'
 
@@ -28,7 +28,8 @@ for jump_path in glob.glob(os.path.join(json_dir_path, '*.jump')):
 	if protocol is not None:
 		item['badge'] = {0: 'RDP', 1: 'VNC'}[protocol]
 
-	item['url'] = 'file://' + urllib.quote(jump_path)
+	item['path'] = jump_path
+	item['subtitle'] = ''
 	items.append(item)
 
 print json.dumps(items)

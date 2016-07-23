@@ -33,10 +33,6 @@
 	<integer>6135</integer>
 	<key>LBRequiredApplication</key>
 	<string>com.p5sys.jump.mac.viewer</string>
-	<key>LBRequirements</key>
-	<string>Jump Desktop for Mac (tested with 6.0.3)</string>
-	<key>LBResult</key>
-	<string>The list of Jump Desktop connections.</string>
 	<key>LBScripts</key>
 	<dict>
 		<key>LBDefaultScript</key>

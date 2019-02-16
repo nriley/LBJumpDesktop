@@ -16,21 +16,28 @@
 	<dict>
 		<key>LBAuthor</key>
 		<string>Nicholas Riley</string>
+		<key>LBChangelog</key>
+		<string>
+			1.1: Properly display Fluid connections and generic OS icons.
+			1.0: Update for bug fix in Jump Desktop 6.7.1.
+		</string>
 		<key>LBEmail</key>
 		<string>launchbar@sabi.net</string>
 		<key>LBRequirements</key>
-		<string>Jump Desktop for Mac (tested with 6.0.3)</string>
+		<string>Jump Desktop for Mac (tested with 8.1.6)</string>
 		<key>LBResult</key>
 		<string>The list of Jump Desktop connections.</string>
 		<key>LBSummary</key>
 		<string>This action returns a list of Jump Desktop connections.</string>
 		<key>LBTwitter</key>
 		<string>@nriley</string>
+		<key>LBUpdateURL</key>
+		<string>https://raw.githubusercontent.com/nriley/LBJumpDesktop/master/Jump%20Desktop%20Connections.lbaction/Contents/Info.plist</string>
 		<key>LBWebsiteURL</key>
 		<string>https://sabi.net/nriley/software/#launchbar</string>
 	</dict>
 	<key>LBMinimumLaunchBarVersion</key>
-	<integer>6135</integer>
+	<integer>6200</integer>
 	<key>LBRequiredApplication</key>
 	<string>com.p5sys.jump.mac.viewer</string>
 	<key>LBScripts</key>
@@ -48,6 +55,6 @@
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2016 Nicholas Riley</string>
+	<string>Copyright © 2016–19 Nicholas Riley</string>
 </dict>
 </plist>

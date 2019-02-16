@@ -1,35 +1,47 @@
 #!/usr/bin/env python
-import glob, json, os, subprocess
+import glob
+import json
+import os
+import subprocess
 
 jump_bundle_id = 'com.p5sys.jump.mac.viewer'
 
 json_dir_path = subprocess.check_output([
-	'/usr/bin/defaults', 'read', jump_bundle_id,
-	'path where JSON .jump files are stored']).rstrip('\n')
+    '/usr/bin/defaults', 'read', jump_bundle_id,
+    'path where JSON .jump files are stored']).rstrip('\n')
+
+unknown_icon = 'com.p5sys.icons.unknown.tintable'
+ostype_icon = {0: unknown_icon,  # redundant, for completeness
+               1: 'com.p5sys.icons.windows.tintable',
+               2: 'com.p5sys.icons.mac.tintable'}
+
+protocol_name = {0: 'RDP', 1: 'VNC', 2: 'Fluid'}
 
 items = []
 for jump_path in glob.glob(os.path.join(json_dir_path, '*.jump')):
-	jump = json.load(file(jump_path, 'r'))
-	item = dict(((prop, jump[key] or '(none)')
-				for key, prop in (('DisplayName', 'title'),
-							      ('TcpHostName', 'label'))
-		if key in jump))
+    jump = json.load(file(jump_path, 'r'))
 
-	protocol = jump.get('ProtocolTypeCode')
-	icon = jump.get('Icon')
+    item = dict(((prop, jump[key] or default)
+                for key, prop, default in (('DisplayName', 'title', '(none)'),
+                                           ('TcpHostName', 'label', ''))
+                 if key in jump))
 
-	if not icon:
-		icon = {0: 'com.p5sys.icons.windows.tintable',
-				1: 'com.p5sys.icons.unknown.tintable',
-				None: 'com.p5sys.icons.unknown.tintable'}[protocol]
-		item['iconIsTemplate'] = True
-	item['icon'] = '%s:%s' % (jump_bundle_id, icon)
+    protocol = jump.get('ProtocolTypeCode')
+    ostype = jump.get('OsTypeCode')
+    icon = jump.get('Icon')
 
-	if protocol is not None:
-		item['badge'] = {0: 'RDP', 1: 'VNC'}[protocol]
+    if not icon:
+        icon = ostype_icon.get(ostype, unknown_icon)
+        item['iconIsTemplate'] = True
 
-	item['path'] = jump_path
-	item['subtitle'] = ''
-	items.append(item)
+    item['icon'] = '%s:%s' % (jump_bundle_id, icon)
+
+    badge = protocol_name.get(protocol, None)
+    if badge is not None:
+        item['badge'] = badge
+
+    item['path'] = jump_path
+    item['subtitle'] = ''
+    items.append(item)
 
 print json.dumps(items)

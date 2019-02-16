@@ -129,6 +129,8 @@ def release(version, github_access_token):
 
     webbrowser.open(html_url)
 
+    print
+    print
     print 'Ensure changes committed and pushed before saving release as final!'
 
 if __name__ == '__main__':

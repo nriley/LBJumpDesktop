@@ -9,7 +9,7 @@
 	<key>CFBundleName</key>
 	<string>Jump Desktop Connections</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>LBAssociatedApplication</key>
 	<string>com.p5sys.jump.mac.viewer</string>
 	<key>LBDescription</key>
@@ -18,9 +18,11 @@
 		<string>Nicholas Riley</string>
 		<key>LBChangelog</key>
 		<string>
-			1.1: Properly display Fluid connections and generic OS icons.
+			1.1: Properly display Fluid connections and generic OS icons. Support automatic updates if you have the Action Updates action installed.
 			1.0: Update for bug fix in Jump Desktop 6.7.1.
 		</string>
+		<key>LBDownloadURL</key>
+		<string>https://github.com/nriley/LBJumpDesktop/releases/download/v1.1/Jump-Desktop-Connections-1.1.lbaction</string>
 		<key>LBEmail</key>
 		<string>launchbar@sabi.net</string>
 		<key>LBRequirements</key>

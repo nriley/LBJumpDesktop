@@ -120,7 +120,8 @@ def release(version, github_access_token):
     update_bundle_info(action_path, version, repo)
 
     requirements_path = os.path.join(project_path, 'requirements.txt')
-    create_virtualenv(export_path, requirements_path)
+    if os.path.isfile(requirements_path):
+        create_virtualenv(export_path, requirements_path)
 
     sign_bundle(export_path)
 
